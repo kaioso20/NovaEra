@@ -1,0 +1,37 @@
+﻿<Window x:Class="NovaEra.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NovaEra"
+        mc:Ignorable="d"
+        Title="NosSeusPés" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Sapato" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="269,146,258.6,0"
+                VerticalAlignment="Top" Width="266" Height="41"
+                Click="Button_Click_Sapato" 
+                />
+        <Button Content="Cliente" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="269,206,258.6,0"
+                VerticalAlignment="Top" Width="266" Height="41"
+                Click="Button_Click_CadPJ" 
+                />
+        <Button Content="Venda" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="271,266,256.6,0"
+                VerticalAlignment="Top" Width="266" Height="40"
+                Click="Button_Click_Venda" 
+                />
+        <Button Content="Estoque" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="271,326,256.6,0"
+                VerticalAlignment="Top" Width="266" Height="40"
+                Click="Button_Click_Estoque" 
+                />
+        <TextBlock HorizontalAlignment="Center" Margin="237,53,231.6,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" 
+                   RenderTransformOrigin="2.787,0.013" Text="Nos Seus Pés" Height="40" Width="325"
+                   TextAlignment="Center" FontSize="25"
+                   />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="center" Height="2" Margin="0,105,0,0" VerticalAlignment="Top" Width="700" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="NovaEra.windowAuxSapato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NovaEra"
+        mc:Ignorable="d"
+        Title="AuxSapato" Height="400" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+       
+
+        <Button Content="Cadastro de Sapato" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="108,115,89.4,0"
+                VerticalAlignment="Top" Width="321"  Height="50" Grid.Column="1" Grid.Row="1"
+                
+                Click="Button_Click_CadSapato"
+                />
+
+        <Button Content="Cadastro de Cor" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="108,170,89.4,0"
+                VerticalAlignment="Top" Width="321" Height="50" Grid.Column="1" Grid.Row="1"
+                
+                Click="Button_Click_CadCorSapato"
+                />
+
+        <Button Content="Cadastro de Tamanho" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="108,225,89.4,0"
+                VerticalAlignment="Top" Width="321" Height="50" Grid.Column="1" Grid.Row="1"
+                
+                Click="Button_Click_CadTmSapato"
+                />
+        <TextBlock HorizontalAlignment="Center" Margin="192,53,182.4,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" 
+                   RenderTransformOrigin="2.787,0.013" Text="Sapato"
+                   Grid.Column="1" Height="82" Width="144" Grid.Row="1"
+                   TextAlignment="Center" FontSize="25"
+                   />
+    </Grid>
+</Window>

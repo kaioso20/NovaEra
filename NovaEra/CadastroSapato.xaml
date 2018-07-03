@@ -1,0 +1,49 @@
+﻿<Window x:Class="NovaEra.CadastroSapato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NovaEra"
+        mc:Ignorable="d"
+        Title="CadastroSapato" Height="700" Width="410" WindowStartupLocation="CenterScreen" Loaded="Windows_Loaded">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="70,15,0,0" TextWrapping="Wrap" Text="Nome do Sapato" VerticalAlignment="Top"/>
+        <TextBox x:Name="NomeSapato" HorizontalAlignment="Left" Height="23" Margin="167,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,39,0,0" TextWrapping="Wrap" Text="Possui cadarço" VerticalAlignment="Top"/>
+        <RadioButton Content="Sim" GroupName="cadarco" Name="Cadarco_sim" HorizontalAlignment="Left" Margin="183,41,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Não" GroupName="cadarco" Name="Cadarco_nao" HorizontalAlignment="Left" Margin="246,41,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,60,0,0" TextWrapping="Wrap" Text="Material" VerticalAlignment="Top"/>
+        <TextBox x:Name="NomeTamanho" HorizontalAlignment="Left" Height="23" Margin="168,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,89,0,0" TextWrapping="Wrap" Text="Cor" VerticalAlignment="Top"/>
+        
+        <ComboBox 
+           x:Name="cboCor" SelectedValuePath="idCor" DisplayMemberPath="cor"
+            RenderTransformOrigin="-0.28,-6.395" Margin="168,89,116.2,555.4"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="70,120,0,0" TextWrapping="Wrap" Text="Preço" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="168,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <DataGrid HorizontalAlignment="center" Height="160" Margin="0,308,0,0" VerticalAlignment="Top" Width="375"
+                   Visibility="{Binding Path=VisibilidadeDataGrid}"
+                  ItemsSource="{Binding Path=Sapatos}"
+                  SelectedItem="{Binding Path=SapatosSelecionados.Cores}"
+                  />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="center" Height="3" Margin="36,254,36,0" VerticalAlignment="Top" Width="332" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,266,0,0" TextWrapping="Wrap" Text="Sapatos Cadastrados" VerticalAlignment="Top"/>
+        <Button Click="CadastrarBtn" 
+            Content="Cadastrar" FontFamily="Montserrat"
+                HorizontalAlignment="Center" Margin="163,219,162.2,0"
+                VerticalAlignment="Top" Width="78" Height="30"
+                />
+        <TextBlock HorizontalAlignment="Left" Margin="70,120,0,0" TextWrapping="Wrap" Text="Preço" VerticalAlignment="Top"/>
+        <TextBox x:Name="CampoPreco" HorizontalAlignment="Left" Height="23" Margin="168,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="70,150,0,0" TextWrapping="Wrap" Text="Tamanho" VerticalAlignment="Top"/>
+        
+        <ComboBox 
+           x:Name="cboTamanho" SelectedValuePath="idTamanho" DisplayMemberPath="tamanho"
+            Margin="169,150,115.2,495.4"/>
+        <Button Content="Excluir" x:Name="DeleteButton" Click="Button_Click" HorizontalAlignment="Left" Margin="70,520,0,0" VerticalAlignment="Top" Width="129"/>
+
+
+    </Grid>
+</Window>
